@@ -1,0 +1,189 @@
+*, *::after,*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --cell-size: 100px
+    --mark-size: calc(var(--cell-size)* .9);
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #5797f1;
+    color: white;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 4rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: ; */
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.info{
+    font-size: 5vw;
+}
+
+.gameContainer{
+    position: relative;
+    background-color: #5797f1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15vh;
+}
+
+
+.button{
+    margin-top: 5vh;
+}
+
+#restart{
+    padding: 15px 50px;
+    background-color: #eaecf9;
+    color: black;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+img{
+    height: 20vw;
+    width: auto;
+    display: none;
+}
+#drawMeme{
+    display: none;
+    height: 20vw;
+    width: auto;
+}
+
+.board{
+
+    display: grid;
+    grid-template-rows: repeat(3, 7vw);
+    grid-template-columns: repeat(3, 7vw);
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.box{
+    border: 0.2vw solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.box:hover{
+    background-color: #7daff5;
+    cursor: pointer;
+}
+
+.infoContainer{
+    margin-top: 0rem;
+    padding: 0 5rem;
+    height: 50vh;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+
+.winner {
+    color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 950px)
+{
+    /* CSS Rules to be applies */
+
+    .gameContainer{
+        margin-top: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .board{
+        display: grid;
+        grid-template-rows: repeat(3, 13vh);
+        grid-template-columns: repeat(3, 13vh);
+    }
+    
+    .box{
+        font-size: 15vh;
+    }
+
+    .board span{
+        margin-top: 0rem;
+    }
+
+    img{
+        margin-top: 0rem;
+        height: 10rem;
+    }
+    #drawMeme{
+        margin-top: 0;
+        height: 10rem;
+    }
+
+
+ .infoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+    height: auto;
+ }   
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    width: 100%;
+}
+
+.info{
+    font-size: 3rem;
+}
+h1{
+    padding: 0;
+    font-size: 2rem;
+}
+
+
+
+}
